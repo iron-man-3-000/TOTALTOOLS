@@ -1,0 +1,650 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 5vw;
+  right: 10vw;
+  z-index: 99;
+  font-size: 1vw;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 1vw;
+  border-radius: 1vw;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -1px;
+}
+header .leftHeader div {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+header .leftHeader div #first {
+  position: absolute;
+  height: 7.51vw;
+  width: 23vw;
+  background-color: #117076;
+}
+header .leftHeader #second {
+  margin-left: 4.3vw;
+  height: 7.51vw;
+  width: 27.8vw;
+  background-color: #117076;
+  transform: skewX(-15deg);
+}
+header .leftHeader img {
+  position: relative;
+  z-index: 1;
+  width: 18vw;
+  height: 7vw;
+  margin-left: 10vw;
+  margin-top: 0.3vw;
+}
+header .RightHeader {
+  width: 72%;
+}
+header .RightHeader div {
+  background: #f2f2f2;
+  height: 3.5vw;
+  display: flex;
+  align-items: center;
+}
+header .RightHeader div section {
+  margin-left: 50vw;
+}
+header .RightHeader div section #txt {
+  font-size: 1.4vw;
+}
+header .RightHeader div section input {
+  background: transparent;
+  border: none;
+  font-size: 1.3vw;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+header .RightHeader div section img {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+header .RightHeader nav {
+  height: 4vw;
+  display: flex;
+  padding-left: 6vw;
+  width: 54vw;
+  justify-content: space-between;
+}
+header .RightHeader nav .ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+header .RightHeader nav .ul li {
+  list-style-type: none;
+  margin-left: 2.5vw;
+}
+header .RightHeader nav .ul li:nth-child(2):hover ul {
+  display: block;
+}
+header .RightHeader nav .ul li:nth-child(2) ul {
+  position: absolute;
+  left: 0;
+  list-style-type: none;
+  top: 6.4vw;
+  display: none;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu {
+  background-color: #e4e4e4;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.15);
+  width: 100vw;
+  position: absolute;
+  z-index: 2;
+  height: 22vw;
+  top: 1.1vw;
+  padding: 1vw 0;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0vw auto;
+  max-width: 90%;
+  position: relative;
+  top: 0px;
+  height: auto;
+  background-color: #e4e4e4;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item {
+  align-items: flex-start;
+  display: inline-flex;
+  padding: 1vw 0px;
+  position: relative;
+  width: 12vw;
+  height: 8vw;
+  border-right: 1px gray solid;
+  margin-bottom: 1vw;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item:nth-child(7), header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item:nth-child(14) {
+  border-right: 0px gray solid;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a {
+  align-items: center;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a:hover {
+  text-decoration: underline;
+  color: #117076;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a img {
+  height: 3vw;
+  width: 3vw;
+  margin-bottom: 1vw;
+}
+header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a span {
+  font-size: 1vw;
+}
+header .RightHeader nav .ul li:first-child {
+  margin-left: 0;
+}
+header .RightHeader nav .ul li .grow-border-effect {
+  border: 0px;
+  position: relative;
+}
+header .RightHeader nav .ul li .grow-border-effect:hover {
+  cursor: pointer;
+}
+header .RightHeader nav .ul li .grow-border-effect:hover::before {
+  -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 0 100%, 0 90%);
+          clip-path: polygon(90% 0, 100% 0, 100% 100%, 0 100%, 0 90%);
+}
+header .RightHeader nav .ul li .grow-border-effect:hover::after {
+  -webkit-clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);
+}
+header .RightHeader nav .ul li .grow-border-effect::before {
+  -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+  z-index: 5;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.3vw solid red;
+  border-right: 0.3vw solid #d3d2d2;
+  box-sizing: content-box;
+  transition: 400ms;
+  transform: skewX(-15deg);
+}
+header .RightHeader nav .ul li .grow-border-effect::after {
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0);
+  z-index: 5;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-top: 0.3vw solid red;
+  border-left: 0.3vw solid #d3d2d2;
+  box-sizing: content-box;
+  transition: 500ms;
+  transform: skewX(-15deg);
+}
+header .RightHeader nav .ul li a {
+  text-decoration: none;
+  color: #117076 !important;
+  font-size: 1.4vw;
+  font-weight: 600;
+  padding: 1.1vw 0.5vw;
+}
+header .RightHeader nav .ul li a img {
+  width: 7vw;
+  height: 3.5vw;
+}
+
+main {
+  overflow-x: hidden;
+}
+main #second {
+  height: 15vw;
+  padding-top: 3vw;
+}
+main #second img:hover {
+  width: 23vw;
+  position: relative;
+  height: auto;
+  transition-duration: 0.5s;
+}
+main .swiper-wrapper {
+  margin-top: -4px;
+}
+main .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+main .swiper-wrapper .swiper-slide a {
+  text-decoration: none;
+  color: #666666;
+}
+main .swiper-wrapper .swiper-slide a div p {
+  text-align: center;
+  font-size: 1.7vw;
+}
+main .swiper-wrapper .swiper-slide .banners img {
+  position: absolute;
+}
+main .swiper-wrapper .swiper-slide .banners .appare {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+  top: 0vw;
+  float: right;
+  background-color: #ebeaea;
+  width: 27vw;
+  height: 33.8vw;
+  display: flex;
+  align-items: center;
+  -webkit-animation: fade-out 4s infinite;
+          animation: fade-out 4s infinite;
+}
+main .swiper-wrapper .swiper-slide .banners .appare div {
+  width: 27vw;
+  display: flex;
+  align-items: center;
+}
+main .swiper-wrapper .swiper-slide .banners .appare div:first-child {
+  width: 9vw;
+  height: 33.9vw;
+  margin-left: -3.5vw;
+  background-color: #ebeaea;
+  transform: skewX(-12deg);
+}
+main .swiper-wrapper .swiper-slide .banners .appare div a {
+  text-decoration: none;
+  width: 19vw;
+  margin: 0 auto;
+}
+main .swiper-wrapper .swiper-slide .banners .appare div a h1 {
+  font-size: 3vw;
+  margin-bottom: 5vw;
+  color: #117076;
+}
+main .swiper-wrapper .swiper-slide .banners .appare div a button {
+  border: 0.23vw solid #117076;
+  color: #117076;
+  background-color: transparent;
+  border-radius: 0;
+  transform: skewX(-15deg);
+  padding: 1vw 3vw;
+  cursor: pointer;
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+main .swiper-wrapper .swiper-slide .banners .appare div a button:hover {
+  background-color: #158d96;
+  transition-duration: 0.5s;
+  color: white;
+}
+main .animations {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vw;
+}
+main .animations div {
+  margin-bottom: 3vw;
+}
+main .animations div img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+main .animations div .text {
+  position: relative;
+  z-index: 1;
+  margin-left: 7.65vw;
+  padding-top: 2vw;
+}
+main .animations div .text span {
+  font-size: 5vw;
+  line-height: 1;
+  text-shadow: rgba(255, 255, 255, 0.7) 3px 3px 3px;
+  color: #117076 !important;
+}
+main .animations div .text p {
+  line-height: 1.2;
+  font-size: 3.5vw;
+  text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+  color: white;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
+}
+main .animations div .text a {
+  text-decoration: none;
+  display: inline-block;
+  box-sizing: border-box;
+}
+main .animations div .text a button {
+  border: 0.23vw solid #117076;
+  color: #117076;
+  background-color: transparent;
+  border-radius: 0;
+  transform: skewX(-15deg);
+  padding: 1vw 3vw;
+  cursor: pointer;
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+main .animations div .text a button:hover {
+  background-color: #158d96;
+  transition-duration: 0.5s;
+  color: white;
+}
+main .back {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+main .back .front {
+  position: relative;
+  z-index: 1;
+  margin-left: 5vw;
+}
+main .back .front:last-child {
+  margin: 0 0 18vw 43vw;
+  top: 6vw;
+}
+main .back .front img {
+  position: absolute;
+  height: auto;
+  width: 50vw;
+}
+main .back .front a {
+  text-decoration: none;
+  color: white;
+}
+main .back .front a div {
+  position: relative;
+  z-index: 3;
+  width: 30vw;
+  background-color: rgba(17, 112, 118, 0.5);
+  text-align: center;
+  top: 7vw;
+  left: 11vw;
+  padding: 1.5vw 0;
+}
+main .back .front a div h1 {
+  font-size: 3vw;
+  line-height: 1.2;
+}
+main .back .front a div p {
+  font-size: 1.5vw;
+  line-height: 1.2;
+}
+main .aboveFooter {
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: 20vw;
+  padding: 30px 0;
+  height: auto;
+}
+main .aboveFooter img {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-top: 1vw;
+}
+main .aboveFooter h1, main .aboveFooter p {
+  font-size: 1vw;
+  color: #666666;
+}
+main .aboveFooter .name {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin: 0 auto;
+}
+main .aboveFooter .name .sections {
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+  padding-right: 3vw;
+  padding-left: 2vw;
+}
+main .aboveFooter .name .sections:nth-child(1) {
+  padding-left: 0;
+}
+main .aboveFooter .name .sections:nth-child(1) nav div {
+  margin: 0 0 0.5vw 0;
+}
+main .aboveFooter .name .sections:nth-child(1) div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4vw;
+  width: 20vw;
+}
+main .aboveFooter .name .sections:nth-child(1) #last {
+  margin-bottom: 3vw;
+}
+main .aboveFooter .name .sections:nth-child(2) {
+  padding-right: 0.4vw;
+}
+main .aboveFooter .name .sections:nth-child(2) nav:first-child {
+  margin-bottom: 2vw;
+  padding-right: 1vw;
+  width: 20vw;
+}
+main .aboveFooter .name .sections:nth-child(2) nav:first-child div {
+  width: 21vw;
+}
+main .aboveFooter .name .sections:nth-child(2) nav:last-child img {
+  margin-bottom: 1vw;
+  margin-top: 0;
+}
+main .aboveFooter .name .sections:nth-child(2) nav div {
+  margin: 0 0 0.5vw 0;
+}
+main .aboveFooter .name .sections:nth-child(2) div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1vw;
+  width: 22vw;
+}
+main .aboveFooter .name .sections:nth-child(3) {
+  padding-right: 0.4vw;
+}
+main .aboveFooter .name .sections:nth-child(3) nav {
+  padding-right: 3vw;
+}
+main .aboveFooter .name .sections:nth-child(3) nav:first-child div {
+  margin: 0 0 0.5vw 0;
+}
+main .aboveFooter .name .sections:nth-child(3) nav:first-child div ul li {
+  list-style-type: none;
+}
+main .aboveFooter .name .sections:nth-child(3) nav:first-child div ul li a {
+  text-decoration: underline;
+  font-size: 1.2vw;
+  color: #666666;
+  line-height: 1;
+}
+main .aboveFooter .name .sections:nth-child(3) div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1vw;
+  width: 24vw;
+}
+main .aboveFooter .name .sections:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+main .aboveFooter .name .sections:nth-child(4) h1 {
+  color: #666666;
+  font-size: 1.5vw;
+}
+main .aboveFooter .name .sections:nth-child(4) p {
+  color: #666666;
+  font-size: 1.2vw;
+}
+main .aboveFooter .name .sections:nth-child(4) a {
+  text-decoration: none;
+}
+main .aboveFooter .name .sections:nth-child(4) a:hover {
+  text-decoration: underline;
+}
+main .aboveFooter .name .sections:nth-child(4) a div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+  width: 15vw;
+}
+main .aboveFooter .name .sections:nth-child(4) a div img {
+  margin: 0;
+}
+main .aboveFooter .name .sections:nth-child(4) a div p {
+  color: #666666;
+  font-size: 1vw;
+}
+
+footer .mainFooter #inIt {
+  background-image: url(merabis-imgs/footerImage.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2vw;
+}
+footer .mainFooter #inIt h1 {
+  text-align: center;
+  color: white;
+  font-size: 4vw;
+  line-height: 1;
+  position: relative;
+  top: 5vw;
+  margin-bottom: 7vw;
+}
+footer .mainFooter #inIt p {
+  text-align: center;
+  margin-top: 1.5vw;
+  color: white;
+  font-size: 1vw;
+}
+footer .mainFooter #inIt .inputs {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 2vw;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-bottom: 3vw;
+}
+footer .mainFooter #inIt .inputs form {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-between;
+}
+footer .mainFooter #inIt .inputs form input {
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 1vw;
+  cursor: pointer;
+  padding: 0.5vw;
+  border: 1px solid gray;
+  color: #202020;
+  border-radius: 0.3vw;
+  transition: 0.1s;
+  width: 18vw;
+}
+footer .mainFooter #inIt .inputs form input:focus {
+  box-shadow: 0 0 5pt 2pt #D3D3D3;
+  outline-width: 0px;
+}
+footer .mainFooter #inIt .inputs form button {
+  border: 0.2vw solid #117076;
+  font-weight: 600;
+  padding: 0.5vw 1.5vw;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: 0.5s;
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+footer .mainFooter #inIt .inputs form button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+footer .downFooter {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+footer .downFooter p {
+  height: 2vw;
+  text-align: center;
+  color: #117076;
+  font-size: 1.2vw;
+}
+
+@media screen and (max-width: 668px) {
+  .swiper-button-next {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}/*# sourceMappingURL=home.css.map */
