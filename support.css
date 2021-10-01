@@ -268,7 +268,7 @@ main .arrow-text h1 {
 main .gif section img {
   position: absolute;
   width: 100%;
-  height: 23vw;
+  height: auto;
 }
 main .gif section .overText {
   position: relative;
@@ -630,12 +630,12 @@ footer .downFooter p {
   font-size: 1.2vw;
 }
 
-.aboveFooter-M {
+.aboveFooter-M, #mobile {
   display: none;
 }
 
 @media (max-width: 800px) {
-  .back, .aboveFooter {
+  .back, .aboveFooter, #desktop {
     display: none;
   }
 
@@ -645,84 +645,29 @@ footer .downFooter p {
   }
 
   main .swiper-wrapper .swiper-slide {
-    height: 22vw;
-    margin-top: 0.8vw;
-  }
-  main .swiper-wrapper .swiper-slide a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    width: 100%;
-    text-align: center;
+    height: 56vw;
   }
   main .swiper-wrapper .swiper-slide a .inModals {
-    padding: 0.5vw 0.5vw 1vw;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 2px;
-    width: 90%;
+    padding: 2vw;
+    margin: 0 auto;
   }
   main .swiper-wrapper .swiper-slide a .inModals img {
-    width: 17vw;
-    height: 10vw;
-    position: relative;
+    width: 100%;
+    height: auto;
   }
   main .swiper-wrapper .swiper-slide a .inModals p {
-    font-size: 2vw;
-    margin-top: -3vw;
+    font-size: 3.5vw;
+    margin-top: -7vw;
   }
   main .swiper-wrapper .swiper-slide a .inModals div {
-    position: relative;
-    z-index: 1;
-    display: block;
-    text-align: center;
-    top: -7vw;
+    top: -27vw;
   }
   main .swiper-wrapper .swiper-slide a .inModals div img {
-    width: 3vw;
-    height: 2vw;
+    width: 8vw;
+    height: 6vw;
   }
-  main .swiper-wrapper .swiper-slide .open-video {
-    position: absolute;
-    display: inline-block;
-    padding: 10px 25px;
-    font-family: monospace;
-    border: solid 2px #000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-  }
-  main .swiper-wrapper .swiper-slide .open-video:hover {
-    background: #000;
-    color: #fff;
-  }
-  main .swiper-wrapper .swiper-slide .overlay {
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
-  .video-active main .swiper-wrapper .swiper-slide .overlay {
+  main #mobile {
     display: block;
-  }
-  main .swiper-wrapper .swiper-slide .close {
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  main .swiper-wrapper .swiper-slide .video-container {
-    padding: 20px 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10vw;
   }
   main .aboveFooter-M {
     display: block;
@@ -766,6 +711,10 @@ footer .downFooter p {
     text-decoration: underline;
     font-size: 3vw;
     color: #666666;
+  }
+  main .modalDialog > div {
+    width: 90%;
+    margin: 65vw auto 0;
   }
   main .back-M {
     display: block;

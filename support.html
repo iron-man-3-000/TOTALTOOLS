@@ -160,7 +160,7 @@
           <h1>პროდუქციის ვიდეოები</h1>
         </div>
         
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" id="desktop">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -230,6 +230,81 @@
           <div class="swiper-button-prev"></div>
         </div>
 
+        <div class="swiper Swiper" id="mobile">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <a href="#modal-1">
+                <div class="inModals">
+                  <img src="merabis-imgs/swiper-video2-1.png" alt="">
+                  <div>
+                      <img src="merabis-imgs/startVideo.png" alt="">
+                  </div>
+                  <p>TOTAL Inverter MMA Welding Machine TW22005</p>
+                </div>
+              </a>
+          </div>  
+
+            <div class="swiper-slide">
+              <a href="#modal-2">
+                <div class="inModals">
+                  <img src="merabis-imgs/swiper-video2-2.png" alt="">
+                  <div>
+                      <img src="merabis-imgs/startVideo.png" alt="">
+                  </div>
+                  <p>TOTAL NEW 20V Lithium-ion Battery Products</p>
+                </div>
+              </a>
+          </div>             
+            
+            <div class="swiper-slide">
+              <a href="#modal-3">
+                <div class="inModals">
+                  <img src="merabis-imgs/swiper-video2-3.png" alt="">
+                  <div>
+                      <img src="merabis-imgs/startVideo.png" alt="">
+                  </div>
+                  <p>TOTAL Li-ion Impact Drills TIDLI2003 & TDLI2003</p>
+                </div>
+              </a>
+          </div>   
+
+            <div class="swiper-slide">
+              <a href="#modal-4">
+                <div class="inModals">
+                  <img src="merabis-imgs/swiper-video2-4.png" alt="">
+                  <div>
+                      <img src="merabis-imgs/startVideo.png" alt="">
+                  </div>
+                  <p>TOTAL 12V Li-ion Impact Drill TIDLI1222</p>
+                </div>
+              </a>
+          </div>   
+
+            <div class="swiper-slide">
+              <a href="#modal-5">
+                <div class="inModals">
+                  <img src="merabis-imgs/swiper-video2-5.png" alt="">
+                  <div>
+                      <img src="merabis-imgs/startVideo.png" alt="">
+                  </div>
+                  <p>TOTAL 6pcs screwdriver set THT250606</p>
+                </div>
+              </a>
+          </div>  
+
+
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+
+
+
+
+
         <section class="modals">
           <div id="modal-1" class="modalDialog">
             <div>
@@ -267,8 +342,6 @@
           </div>
 
           </section>
-  
-
 
           <div class="aboveFooter">
             <div class="name">
@@ -430,6 +503,21 @@
           prevEl: ".swiper-button-prev",
         },
       });
+      ///////////
+      var swiper = new Swiper(".Swiper", {
+        slidesPerView: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        // autoplay: {
+        //   delay: 2000,
+        //   disableOnInteraction: false,
+        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      ///////
 
 
 function startTime() {

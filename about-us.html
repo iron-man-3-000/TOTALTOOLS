@@ -175,7 +175,7 @@
           <h1>პროდუქციის ვიდეოები</h1>
         </div>
         
-         <div class="swiper mySwiper">
+         <div class="swiper Swiper" id="desktope">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -220,12 +220,59 @@
             </a>
         </div>  
 
-         
-
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
+        </div> 
+
+        <div class="swiper mySwiper" id="mobile">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <a href="#modal-1">
+                <img src="merabis-imgs/swiper-video1.png" alt="">
+                <div>
+                    <img src="merabis-imgs/startVideo.png" alt="">
+                    
+                    <p><span>TOTAL TOOLS— Improve  Your Efficiency!</span></p>
+                </div>
+              </a>
+          </div>  
+
+            <div class="swiper-slide">
+                <a href="#modal-2">
+                  <img src="merabis-imgs/swiper-video2.png" alt="">
+                  <div>
+                      <img src="merabis-imgs/startVideo.png" alt="">
+                      <p><span>TOTAL 20V Lithium-Ion Series Your Good Helper</span> </p>
+                  </div>
+                </a>
+            </div>            
+            
+            <div class="swiper-slide">
+              <a href="#modal-3">
+                <img src="merabis-imgs/swiper-video3.png" alt="">
+                <div>
+                    <img src="merabis-imgs/startVideo.png" alt="">
+                    <p><span>TOTAL: One-Stop Tools Station</span> </p>
+                </div>
+              </a>
+          </div>  
+
+          <div class="swiper-slide">
+            <a href="#modal-4">
+              <img src="merabis-imgs/swiper-video4.png" alt="">
+              <div>
+                  <img src="merabis-imgs/startVideo.png" alt="">
+                  <p><span>TOTAL SPONSORS LIGA 1</span> </p>
+              </div>
+            </a>
+        </div>  
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div> 
 
         <section class="modals">
@@ -260,7 +307,6 @@
           
           </section>
   
-
           <div class="aboveFooter">
             <div class="name">
               
@@ -409,7 +455,7 @@
 
 <script>
 
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".Swiper", {
         slidesPerView: 4,
         loop: true,
         loopFillGroupWithBlank: true,
@@ -422,6 +468,22 @@
           prevEl: ".swiper-button-prev",
         },
       });
+      //////////////////////
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      ///////////////////
+
 
 
 function startTime() {

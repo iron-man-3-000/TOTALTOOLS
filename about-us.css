@@ -302,9 +302,12 @@ main .swiper-wrapper .swiper-slide a div p {
   position: relative;
   background-color: #117076;
   width: 16.99vw;
+  height: 3vw;
   margin-left: 3.85vw;
   opacity: 0.8;
   margin-top: 1.4vw;
+  display: flex;
+  flex-direction: column;
 }
 main .swiper-wrapper .swiper-slide a div p span {
   opacity: 1;
@@ -648,12 +651,12 @@ footer .downFooter p {
   font-size: 1.2vw;
 }
 
-.aboveFooter-M {
+.aboveFooter-M, #mobile {
   display: none;
 }
 
 @media (max-width: 800px) {
-  .back, .aboveFooter {
+  .back, .aboveFooter, #desktope {
     display: none;
   }
 
@@ -733,6 +736,81 @@ footer .downFooter p {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 10vw;
+  }
+  main #mobile {
+    display: block;
+  }
+  main #mobile .swiper-slide {
+    height: 56vw;
+  }
+  main #mobile .swiper-slide a img {
+    width: 80%;
+  }
+  main #mobile .swiper-slide a div {
+    top: -29vw;
+  }
+  main #mobile .swiper-slide a div img {
+    width: 7vw;
+    height: 6vw;
+  }
+  main #mobile .swiper-slide a div p {
+    margin-left: 9.3vw;
+    padding: 1.5vw 0.5vw;
+    background: none;
+    width: 80.2vw;
+    margin-top: 15.2vw;
+  }
+  main #mobile .swiper-slide a div p span {
+    font-size: 3.7vw;
+    width: 100%;
+  }
+  main #mobile .swiper-slide .open-video {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: monospace;
+    border: solid 2px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  main #mobile .swiper-slide .open-video:hover {
+    background: #000;
+    color: #fff;
+  }
+  main #mobile .swiper-slide .overlay {
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .video-active main #mobile .swiper-slide .overlay {
+    display: block;
+  }
+  main #mobile .swiper-slide .close {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  main #mobile .swiper-slide .video-container {
+    padding: 20px 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+  }
+  main .modalDialog > div {
+    width: 90%;
+    margin: 65vw auto 0;
   }
   main .aboveFooter-M {
     display: block;
