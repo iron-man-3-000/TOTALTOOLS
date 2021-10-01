@@ -42,30 +42,30 @@ body {
   background-color: #555;
 }
 
-header {
+.desk-header {
   display: flex;
   flex-direction: row;
-  margin-bottom: -1px;
+  margin-bottom: -3px;
 }
-header .leftHeader div {
+.desk-header .leftHeader div {
   display: flex;
   flex-direction: row;
   position: absolute;
 }
-header .leftHeader div #first {
+.desk-header .leftHeader div #first {
   position: absolute;
   height: 7.51vw;
   width: 23vw;
   background-color: #117076;
 }
-header .leftHeader #second {
+.desk-header .leftHeader #second {
   margin-left: 4.3vw;
   height: 7.51vw;
   width: 27.8vw;
   background-color: #117076;
   transform: skewX(-15deg);
 }
-header .leftHeader img {
+.desk-header .leftHeader img {
   position: relative;
   z-index: 1;
   width: 18vw;
@@ -73,48 +73,57 @@ header .leftHeader img {
   margin-left: 10vw;
   margin-top: 0.3vw;
 }
-header .RightHeader {
+.desk-header .RightHeader {
   width: 72%;
 }
-header .RightHeader div {
+.desk-header .RightHeader div {
   background: #f2f2f2;
   height: 3.5vw;
   display: flex;
   align-items: center;
 }
-header .RightHeader div section {
+.desk-header .RightHeader div section {
   margin-left: 50vw;
 }
-header .RightHeader div section #txt {
-  font-size: 1.4vw;
+.desk-header .RightHeader div section input {
+  background: transparent;
+  border: none;
+  font-size: 1.3vw;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
 }
-header .RightHeader nav {
+.desk-header .RightHeader div section img {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.desk-header .RightHeader nav {
   height: 3.7vw;
   display: flex;
   padding-left: 6vw;
   width: 54vw;
   justify-content: space-between;
 }
-header .RightHeader nav .ul {
+.desk-header .RightHeader nav .ul {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-header .RightHeader nav .ul li {
+.desk-header .RightHeader nav .ul li {
   list-style-type: none;
   margin-left: 2.5vw;
 }
-header .RightHeader nav .ul li:nth-child(2):hover ul {
+.desk-header .RightHeader nav .ul li:nth-child(2):hover ul {
   display: block;
 }
-header .RightHeader nav .ul li:nth-child(2) ul {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul {
   position: absolute;
   left: 0;
   list-style-type: none;
   top: 6.4vw;
   display: none;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu {
   background-color: #e4e4e4;
   box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.15);
   width: 100vw;
@@ -124,7 +133,7 @@ header .RightHeader nav .ul li:nth-child(2) ul li .manu {
   top: 1.02vw;
   padding: 1vw 0;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -135,7 +144,7 @@ header .RightHeader nav .ul li:nth-child(2) ul li .manu div {
   height: auto;
   background-color: #e4e4e4;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item {
   align-items: flex-start;
   display: inline-flex;
   padding: 1vw 0px;
@@ -145,10 +154,10 @@ header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item {
   border-right: 1px gray solid;
   margin-bottom: 1vw;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item:nth-child(7), header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item:nth-child(14) {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item:nth-child(7), .desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item:nth-child(14) {
   border-right: 0px gray solid;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a {
   align-items: center;
   color: #666;
   display: flex;
@@ -159,37 +168,37 @@ header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a {
   width: 100%;
   text-decoration: none;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a:hover {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a:hover {
   text-decoration: underline;
   color: #117076;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a img {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a img {
   height: 3vw;
   width: 3vw;
   margin-bottom: 1vw;
 }
-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a span {
+.desk-header .RightHeader nav .ul li:nth-child(2) ul li .manu div .item a span {
   font-size: 1vw;
 }
-header .RightHeader nav .ul li:first-child {
+.desk-header .RightHeader nav .ul li:first-child {
   margin-left: 0;
 }
-header .RightHeader nav .ul li .grow-border-effect {
-  position: relative;
+.desk-header .RightHeader nav .ul li .grow-border-effect {
   border: 0px;
+  position: relative;
 }
-header .RightHeader nav .ul li .grow-border-effect:hover {
+.desk-header .RightHeader nav .ul li .grow-border-effect:hover {
   cursor: pointer;
 }
-header .RightHeader nav .ul li .grow-border-effect:hover::before {
+.desk-header .RightHeader nav .ul li .grow-border-effect:hover::before {
   -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 0 100%, 0 90%);
           clip-path: polygon(90% 0, 100% 0, 100% 100%, 0 100%, 0 90%);
 }
-header .RightHeader nav .ul li .grow-border-effect:hover::after {
+.desk-header .RightHeader nav .ul li .grow-border-effect:hover::after {
   -webkit-clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);
           clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);
 }
-header .RightHeader nav .ul li .grow-border-effect::before {
+.desk-header .RightHeader nav .ul li .grow-border-effect::before {
   -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
           clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
   z-index: 5;
@@ -205,7 +214,7 @@ header .RightHeader nav .ul li .grow-border-effect::before {
   transition: 400ms;
   transform: skewX(-15deg);
 }
-header .RightHeader nav .ul li .grow-border-effect::after {
+.desk-header .RightHeader nav .ul li .grow-border-effect::after {
   -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0);
           clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0);
   z-index: 5;
@@ -221,16 +230,116 @@ header .RightHeader nav .ul li .grow-border-effect::after {
   transition: 500ms;
   transform: skewX(-15deg);
 }
-header .RightHeader nav .ul li a {
+.desk-header .RightHeader nav .ul li a {
   text-decoration: none;
   color: #117076 !important;
   font-size: 1.4vw;
   font-weight: 600;
   padding: 1.1vw 0.5vw;
 }
-header .RightHeader nav .ul li a img {
+.desk-header .RightHeader nav .ul li a img {
   width: 7vw;
   height: 3.5vw;
+}
+
+.mob-header {
+  background: #54d5fd;
+  padding: 15px 0 12px;
+  overflow: hidden;
+  display: block;
+  height: 8vw;
+}
+.mob-header:first-child a {
+  width: 10vw;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  left: 2vw;
+  top: 2vw;
+}
+.mob-header a #Burger {
+  width: 100%;
+  height: auto;
+}
+
+.toggle-menu {
+  width: 10vw;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  right: 2vw;
+  top: 2vw;
+}
+.toggle-menu:last-child {
+  left: 2vw;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 345342;
+  width: 45vw;
+  height: 100%;
+  padding-top: 15vw;
+  background: #117076;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+#menu div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+#menu div a img {
+  width: 11vw;
+  height: auto;
+  position: relative;
+  top: -4vw;
+  margin-top: -8vw;
+  left: 3vw;
+}
+#menu .toggle-menu {
+  z-index: 4545;
+  text-decoration: none;
+  transform: rotate(45deg);
+  font-size: 11vw;
+  font-weight: bold;
+  color: white;
+}
+#menu ul {
+  width: 90%;
+  margin: 0 auto;
+}
+#menu ul li {
+  list-style-type: none;
+}
+#menu ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 2;
+  font-size: 5vw;
+}
+
+#menu {
+  transform: translate3d(0, 0, 0) translateX(-220px);
+  transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+}
+
+#menu:target {
+  transform: translate3d(0, 0, 0) translateX(0);
 }
 
 main .products .arrow-text {
@@ -619,13 +728,17 @@ footer .downFooter p {
   font-size: 1.2vw;
 }
 
-.aboveFooter-M {
+.aboveFooter-M, .mob-header {
   display: none;
 }
 
 @media (max-width: 800px) {
-  .back, .aboveFooter {
+  .back, .aboveFooter, .desk-header {
     display: none;
+  }
+
+  .mob-header {
+    display: block;
   }
 
   #myBtn {

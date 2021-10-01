@@ -32,8 +32,11 @@ body{
           }
 }
 
+#txt{
+                font-size:1.4vw;   
+                }
 
-header{
+.desk-header{
     display: flex;
     flex-direction: row;
     margin-bottom: -3px;
@@ -78,9 +81,7 @@ header{
             
             section{
                 margin-left: 50vw;
-                #txt{
-                font-size:1.4vw;   
-                }
+                
                 input{
                     background: transparent;
                     border: none;
@@ -259,6 +260,131 @@ header{
 }
 
 }
+
+// Mixins
+@mixin transform($value) {
+    -webkit-transform: translate3d(0, 0, 0) $value;
+    -moz-transform: translate3d(0, 0, 0) $value;
+    -ms-transform: translate3d(0, 0, 0) $value;
+    transform: translate3d(0, 0, 0) $value;
+  }
+  
+  @mixin transition($value) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    transition: $value;
+  }
+  .mob-header {
+    background: #54d5fd;
+    padding: 15px 0 12px;
+    overflow: hidden;
+    display: block;
+    height: 8vw;
+    &:first-child{
+        a{
+            width: 10vw;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+            position: fixed;
+            z-index: 2;
+            left: 2vw;
+            top: 2vw;
+        }
+    }
+a{
+    
+    #Burger{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+    
+  }
+  
+  .toggle-menu {
+      &:last-child{
+        left: 2vw;
+      }
+    width: 10vw;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+    right: 2vw;
+    top: 2vw;
+  }
+  
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 345342;
+    width: 45vw;
+    height: 100%;
+    padding-top: 15vw;
+    background: #117076;
+    box-shadow: -10px 0 10px rgb(0 0 0 / 20%) inset;
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    a{
+        img{
+            width: 11vw;
+            height: auto;
+            position: relative;
+            top: -4vw;
+            margin-top: -8vw;
+            left: 3vw;
+        }
+    }
+}
+
+    .toggle-menu {
+        z-index: 4545;
+        text-decoration: none;
+        transform: rotate(45deg);
+        font-size: 11vw;
+        font-weight: bold;
+        color: white;
+            
+  }
+  ul{
+    width: 90%;
+    margin: 0 auto;
+    li{
+       list-style-type: none;
+       a{
+        text-decoration: none;
+        color: white;
+        line-height: 2;
+        font-size: 5vw;
+       } 
+    }
+}
+}
+  #menu {
+    @include transform(translateX(-300vw));
+    @include transition(all .25s cubic-bezier(.16,.63,.45,.98));
+  }
+
+  #menu:target {
+    @include transform(translateX(0));
+  }
 
 
 
@@ -613,6 +739,7 @@ main{
 }
     }
 }
+
 footer{
     .mainFooter{
  
@@ -697,7 +824,8 @@ footer{
         }
     }
 }
-.back-M,.aboveFooter-M{
+
+.back-M,.aboveFooter-M,.mob-header{
     display: none;
 }
 
@@ -705,8 +833,12 @@ footer{
 
 @media (max-width: 800px) {
 
-    .back,.aboveFooter{
+    .back,.aboveFooter, .desk-header{
         display: none;
+    }
+
+    .mob-header{
+        display: block;
     }
 
     #myBtn {
