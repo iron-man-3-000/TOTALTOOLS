@@ -101,7 +101,7 @@ header .RightHeader div section img {
   height: 1.5vw;
 }
 header .RightHeader nav {
-  height: 4vw;
+  height: 3.7vw;
   display: flex;
   padding-left: 6vw;
   width: 54vw;
@@ -133,7 +133,7 @@ header .RightHeader nav .ul li:nth-child(2) ul li .manu {
   position: absolute;
   z-index: 2;
   height: 22vw;
-  top: 1.29vw;
+  top: 1.02vw;
   padding: 1vw 0;
 }
 header .RightHeader nav .ul li:nth-child(2) ul li .manu div {
@@ -656,6 +656,14 @@ footer .downFooter p {
 }
 
 @media (max-width: 800px) {
+  #myBtn {
+    bottom: 25vw;
+    right: 15vw;
+    font-size: 2.5vw;
+    padding: 1.5vw;
+    border-radius: 1.5vw;
+  }
+
   .back, .aboveFooter, #desktope {
     display: none;
   }
