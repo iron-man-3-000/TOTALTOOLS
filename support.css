@@ -25,6 +25,7 @@ body {
 }
 
 #myBtn {
+  display: block;
   position: fixed;
   bottom: 5vw;
   right: 10vw;
@@ -291,9 +292,9 @@ body {
   top: 0;
   left: 0;
   z-index: 345342;
-  width: 220px;
+  width: 45vw;
   height: 100%;
-  padding-top: 60px;
+  padding-top: 15vw;
   background: #117076;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2) inset;
 }
@@ -727,7 +728,7 @@ footer .downFooter p {
   font-size: 1.2vw;
 }
 
-.aboveFooter-M, #mobile {
+.aboveFooter-M, #mobile, .mob-header {
   display: none;
 }
 
@@ -738,14 +739,6 @@ footer .downFooter p {
 
   .mob-header {
     display: block;
-  }
-
-  #myBtn {
-    bottom: 25vw;
-    right: 15vw;
-    font-size: 2.5vw;
-    padding: 1.5vw;
-    border-radius: 1.5vw;
   }
 
   .swiper-button-next, .swiper-button-prev {
@@ -789,6 +782,8 @@ footer .downFooter p {
   main .aboveFooter-M h1, main .aboveFooter-M p {
     font-size: 3vw;
     color: #666666;
+    display: flex;
+    align-items: center;
   }
   main .aboveFooter-M .name-M {
     display: flex;

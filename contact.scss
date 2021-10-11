@@ -883,8 +883,12 @@ footer{
                 height: 6vw;
             }
             h1,p{
-                font-size: 3vw;   
-                color: #666666;
+                
+                    font-size: 3vw;
+                    color: #666666;
+                    display: flex;
+                    align-items: center;
+            
             }
             .name-M{
                 display: flex;

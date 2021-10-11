@@ -15,6 +15,7 @@ body{
 }
 
 #myBtn {
+    display: block;
     position: fixed;
     bottom: 5vw;
     right: 10vw;
@@ -817,7 +818,7 @@ footer{
         }
     }
 }
-.aboveFooter-M,#mobile{
+.aboveFooter-M,#mobile,.mob-header{
     display: none;
 }
 
@@ -832,13 +833,7 @@ footer{
         display: block;
     }
 
-    #myBtn {
-        bottom: 25vw;
-        right: 15vw;
-        font-size: 2.5vw;
-        padding: 1.5vw;
-        border-radius: 1.5vw;
-    }
+ 
 
     .swiper-button-next, .swiper-button-prev{
       right: 20px;
@@ -886,8 +881,10 @@ footer{
                 height: 6vw;
             }
             h1,p{
-                font-size: 3vw;   
+                font-size: 3vw;
                 color: #666666;
+                display: flex;
+                align-items: center;
             }
             .name-M{
                 display: flex;
